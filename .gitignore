@@ -1,18 +1,8 @@
 # Ignore node_modules directory
 node_modules/
 
-# Ignore .pnp.cjs and .pnp.loader.mjs files
-.pnp.cjs
-.pnp.loader.mjs
-
-# Ignore yarn.lock file
-yarn.lock
-
 # Ignore .idea directory
 .idea/
-
-# Ignore .yarn directory
-.yarn/
 
 # Ignore any files generated during the build
 /dist/

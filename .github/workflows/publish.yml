@@ -1,0 +1,39 @@
+name: Publish to Google Drive
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies with Yarn Berry
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Authenticate clasp
+        run: echo '${{ secrets.CLASP_CREDENTIALS }}' > ~/.clasprc.json
+
+      - name: Extract SCRIPT_ID from file
+        id: script_id
+        run: echo ::set-output name=script_id::$(jq -r '.scriptId' .clasp.json)
+
+      - name: Push to Google Drive
+        run: |
+          yarn deploy
+        env:
+          SCRIPT_ID: ${{ steps.script_id.outputs.script_id }}
+          CLASP_CREDENTIALS: ${{ secrets.CLASP_CREDENTIALS }}

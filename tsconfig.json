@@ -12,15 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "plugins": [
-      { "name": "@yarnpkg/pnpify", "usePnp": true }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "*": [".yarn/*", ".yarn/cache/*"]
-    },
-    "types": ["google-apps-script"]
+    "allowUnusedLabels": false
   },
   "include": ["src/**/*", "test/**/*", "rollup.config.mjs"]
 }

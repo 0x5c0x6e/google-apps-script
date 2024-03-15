@@ -10,7 +10,7 @@ export function onInstall(e: GoogleAppsScript.Events.DocsOnOpen) {
   onOpen(e);
 }
 
-export function selectDocument() {
+export function numberHeadersRoot() {
   const document: GoogleAppsScript.Document.Document = DocumentApp.getActiveDocument();
   numberHeaders(document)
 }
