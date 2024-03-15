@@ -1,0 +1,7 @@
+{
+  "timeZone": "Europe/Belgrade",
+  "dependencies": {
+  },
+  "oauthScopes": ["https://www.googleapis.com/auth/script.projects"],
+  "runtimeVersion": "V8"
+}
