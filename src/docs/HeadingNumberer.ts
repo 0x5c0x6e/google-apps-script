@@ -2,7 +2,7 @@
 export function onOpen(e: GoogleAppsScript.Events.DocsOnOpen) {
   DocumentApp.getUi()
     .createAddonMenu()
-    .addItem('Add Numbers to Headings', 'selectDocument')
+    .addItem('Add Numbers to Headings', 'numberHeadersRoot')
     .addToUi();
 }
 
