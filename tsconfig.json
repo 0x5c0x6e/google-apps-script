@@ -19,7 +19,8 @@
     "baseUrl": ".",
     "paths": {
       "*": [".yarn/*", ".yarn/cache/*"]
-    }
+    },
+    "types": ["google-apps-script"]
   },
   "include": ["src/**/*", "test/**/*", "rollup.config.mjs"]
 }
